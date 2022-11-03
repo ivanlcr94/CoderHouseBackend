@@ -1,20 +1,30 @@
 [
    {
-      "nombre": "palaancha3",
-      "descripcion": "hola",
+      "nombre": "medias",
+      "descripcion": "medias adidas",
       "foto": "url.imagen",
       "precio": 500,
       "stock": 20,
       "id": 1,
-      "timestamp": "01/11/2022 10:54:00"
+      "timestamp": "02/11/2022 10:54:00"
    },
    {
-      "nombre": "palaancha3",
-      "descripcion": "hola",
+      "nombre": "pelota",
+      "descripcion": "plota de messi adidas",
       "foto": "url.imagen",
-      "precio": 500,
+      "precio": 5000,
       "stock": 20,
       "id": 2,
-      "timestamp": "01/11/2022 10:54:08"
+      "timestamp": "02/11/2022 10:54:08"
+   },
+   {
+      "nombre": "botines adidas",
+      "descripcion": "botines rojos adidas",
+      "foto": "url.imagen",
+      "precio": 18000,
+      "stock": 20,
+      "id": 3,
+      "timestamp": "02/11/2022 11:22:34"
    }
+   
 ]

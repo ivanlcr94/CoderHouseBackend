@@ -71,13 +71,11 @@ router.put('/api/productos/:id', verifyrole, async (req, res) => {
 router.delete('/api/productos/:id', verifyrole, async (req, res) => {
     const id = req.params.id;
     const foundElement = await productos.getById(id)
-
-   const eliminarElemento = foundElement? await productos.deleteById(id) : "el producto no existe";  
+    const eliminarElemento = foundElement? await productos.deleteById(id) : "el producto no existe";  
 
     res.send(eliminarElemento? "el producto no existe":'se elimino el producto');
 })
 
 // EXPORTAMOS ROUTER
 
-export {router as routerProductos};
-
+export {router as routerProductos, productos}

@@ -88,6 +88,34 @@ class Container {
     }
   }
 
+  async updateById(id, newData) {
+    try {
+      const elements = await this.getAll();
+
+      const foundElementIndex = elements.findIndex(
+        (element) => element.id == id
+      );
+
+      if (foundElementIndex === -1) return null;
+
+      const foundElement = elements[foundElementIndex];
+
+      elements[foundElementIndex] = {
+        ...foundElement,
+        ...newData,
+      };
+
+      await fs.promises.writeFile(
+        this.filePath,
+        JSON.stringify(elements, null, 3)
+      );
+
+      return foundElement;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 }
 
 export { Container };
