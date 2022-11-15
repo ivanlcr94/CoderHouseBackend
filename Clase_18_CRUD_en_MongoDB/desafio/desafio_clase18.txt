@@ -1,0 +1,95 @@
+1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos.
+El formato de los documentos debe estar en correspondencia con el que venimos
+utilizando en el entregable con base de datos MariaDB. 
+
+1.- show dbs
+2.- use ecommerce
+3.- db.createCollection('mensajes')
+4.- db.createCollection('productos')
+5.- db.mensajes.insertMany(
+[
+    {"author": "anonimus2@gmail.com","text": "¿Hola como estas?"},
+    {"author": "anonimus1@gmail.com","text": "Bien ¿y vos?"},
+    {"author": "anonimus2@gmail.com","text": "Buien, quien te parece que gana el mundial?"},
+    {"author": "anonimus1@gmail.com","text": "Argentina papa!"},
+    {"author": "anonimus2@gmail.com","text": "seguro?"},
+    {"author": "anonimus1@gmail.com","text": "Mas vale!"},
+    {"author": "anonimus2@gmail.com","text": "bueno mira, si gana Argentina estan todos aprobados"},
+    {"author": "anonimus1@gmail.com","text": "listo!"},
+    {"author": "anonimus2@gmail.com","text": "Vamos la escaloneta"},
+    {"author": "anonimus1@gmail.com","text": "see!"}
+]
+)
+
+
+
+2) Definir las claves de los documentos en relación a los campos de las tablas de esa base.
+En el caso de los productos, poner valores al campo precio entre los 100 y 5000 pesos
+(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 2860, 3350, 4320, 4990).
+
+1.- db.productos.insertMany(
+[ 
+    {"producto":"calculadora", "precio": 200, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"iphone", "precio": 900, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"mause", "precio": 1000, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"teclado", "precio": 1200, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"cargador 19v", "precio": 1500, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"parlante bluetooth", "precio": 1800, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"silla gamer", "precio": 2200, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"pes 2020", "precio": 2500, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"fifa 2022", "precio": 3500, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"},
+    {"producto":"call of duty", "precio": 4000, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}
+] 
+)
+
+
+
+3) Listar todos los documentos en cada colección.
+
+1.- db.mensajes.find()
+2.- db.productos.find()
+
+
+
+4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+1.- db.mensajes.countDocuments()
+2.- db.productos.countDocuments()
+
+
+
+5)Realizar un CRUD sobre la colección de productos:
+
+a)
+1.- db.productos.insertOne(
+    {"producto":"fifa 2019", "precio": 4500, "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}
+    )
+
+b) Realizar una consulta por nombre de producto específico:
+1.- db.productos.findOne({"producto": "calculadora"})
+
+    i) Listar los productos con precio menor a 1000 pesos.
+    1.- db.productos.find({"precio": {$lt :1000}})
+
+    ii) Listar los productos con precio entre los 1000 a 3000 pesos.
+    1.- db.productos.find({$and: [ {"precio": {$gt:1000}},{"precio": {$lt :3000}} ] })
+
+    iii) Listar los productos con precio mayor a 3000 pesos.
+    1.- db.productos.find({"precio": {$gt :3000}})
+
+    iv) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+    1.- db.productos.find({},{"producto":1,"_id":0}).skip(2).limit(1).sort({"precio":1})
+
+
+c) Hacer una actualización sobre todos los productos, agregando el campo stock
+ a todos ellos con un valor de 100.
+    1.- db.productos.update({},{$set:{"stock":100}},{upsert:true,multi:true})
+
+d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos. 
+    1.- db.productos.update({"precio": {$gt :4000}},{$set:{"stock":0}},{multi:true})
+
+
+e) Borrar los productos con precio menor a 1000 pesos 
+    1.- db.productos.deleteMany({"precio":{$lt:1000}})
+
+Exporte las bases de datos desde MongoDB Compass en formato .json (al final de realizar todas las consultas)

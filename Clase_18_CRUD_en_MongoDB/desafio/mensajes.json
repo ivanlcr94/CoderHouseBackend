@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550142"
+  },
+  "author": "anonimus2@gmail.com",
+  "text": "¿Hola como estas?"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550143"
+  },
+  "author": "anonimus1@gmail.com",
+  "text": "Bien ¿y vos?"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550144"
+  },
+  "author": "anonimus2@gmail.com",
+  "text": "Buien, quien te parece que gana el mundial?"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550145"
+  },
+  "author": "anonimus1@gmail.com",
+  "text": "Argentina papa!"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550146"
+  },
+  "author": "anonimus2@gmail.com",
+  "text": "seguro?"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550147"
+  },
+  "author": "anonimus1@gmail.com",
+  "text": "Mas vale!"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550148"
+  },
+  "author": "anonimus2@gmail.com",
+  "text": "bueno mira, si gana Argentina estan todos aprobados"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba550149"
+  },
+  "author": "anonimus1@gmail.com",
+  "text": "listo!"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba55014a"
+  },
+  "author": "anonimus2@gmail.com",
+  "text": "Vamos la escaloneta"
+},{
+  "_id": {
+    "$oid": "6373db9b453cbdfcba55014b"
+  },
+  "author": "anonimus1@gmail.com",
+  "text": "see!"
+}]

@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "6373df36453cbdfcba55014e"
+  },
+  "producto": "mause",
+  "precio": 1000,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba55014f"
+  },
+  "producto": "teclado",
+  "precio": 1200,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550150"
+  },
+  "producto": "cargador 19v",
+  "precio": 1500,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550151"
+  },
+  "producto": "parlante bluetooth",
+  "precio": 1800,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550152"
+  },
+  "producto": "silla gamer",
+  "precio": 2200,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550153"
+  },
+  "producto": "pes 2020",
+  "precio": 2500,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550154"
+  },
+  "producto": "fifa 2022",
+  "precio": 3500,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373df36453cbdfcba550155"
+  },
+  "producto": "call of duty",
+  "precio": 4000,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "6373e3f4453cbdfcba550156"
+  },
+  "producto": "fifa 2019",
+  "precio": 4500,
+  "urlImagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+  "stock": 0
+}]
