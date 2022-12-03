@@ -1,7 +1,7 @@
 import { Container } from "./containers/Container.js";
 import {dbSqlite3} from './connection/dbSqlite3.js'
 import {dbMariaDB} from './connection/dbMariaDB.js'
-import { normalize, schema } from 'normalizr';
+import { normalize, schema, denormalize } from 'normalizr';
 import {inspect} from 'util'
 import  express  from "express";
 import { createServer } from "http";
@@ -25,7 +25,14 @@ const PORT = 8080;
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
+// api mock 
 
+app.get('/api/productos-test', async (req, res) => {
+
+  const mostrarProductos = new MockService()
+  mostrarProductos.getAll(5)
+     res.json(mostrarProductos);
+ })
 
 
 // Base de datos
@@ -101,12 +108,22 @@ server.on('error', err => console.log(`Error: ${err}`));
 
 
 
+
+
 const myData = mensajesJson;
+/* const author = new schema.Entity('author')
+const mySchema = { mensajes: [[author]] }; */
+
 const author = new schema.Entity('author')
-const user = new schema.Entity('users',{
-  author: author
-});
-const mySchema = { users: [user] };
+const mensajes = new schema.Entity('mensajes',{
+  author:author,
+})
+
+const mySchema = { mensajes: [[mensajes]] };
+
 const normalizedData = normalize(myData, mySchema);
+const denormalizedData = denormalize(normalizedData.result, mySchema , normalizedData.entities);
 
 console.log(inspect(normalizedData, false, 12, true)) 
+console.log('--------------------------------')
+console.log(inspect(denormalizedData, false, 12, true)) 
