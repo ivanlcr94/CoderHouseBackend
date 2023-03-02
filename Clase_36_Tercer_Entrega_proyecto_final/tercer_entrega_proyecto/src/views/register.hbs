@@ -1,0 +1,42 @@
+<div class="container my-5">
+  <div class="jumbotron">
+    <h1>Registro de Usuario</h1>
+    <br>
+    <form class="form" action="/register" method="post" role="form" autocomplete="off">
+
+      <div class="form-label fw-bold">
+        <input id="email" name='username' placeholder="Email" class="form-control" type="email" required>
+      </div>
+
+      <div class="form-label fw-bold">
+        <input id="password"  name='password' placeholder="password" class="form-control" type="password" required>
+      </div>
+
+      <div class="form-label fw-bold">
+        <input id="nombre"  name='nombre' placeholder="nombre" class="form-control" type="nombre" required>
+      </div>
+
+       <div class="form-label fw-bold">
+        <input id="direccion"  name='direccion' placeholder="dirección" class="form-control" type="text" required>
+      </div>
+
+       <div class="form-label fw-bold">
+        <input id="edad"  name='edad' placeholder="edad" class="form-control" type="number" required>
+      </div>
+
+      <div class="form-label fw-bold">
+        <input id="telefono"  name='telefono' placeholder="numero de telefono debe contener prefijos internacionales" class="form-control" type="tel" required>
+      </div>
+
+      <div class="form-label fw-bold">
+        <input class="btn btn-success my-3" type="submit" value="Register">
+      </div>
+    </form>
+    
+    <hr>
+    
+    <div class="text-left">
+      <button class="btn btn-success my-3" onclick="location.href = '/login'">Ir a Login</button>
+    </div>
+  </div>
+</div>
